@@ -1,0 +1,167 @@
+mains antiguos
+
+ISALPHA
+
+int	main(int argc, char **argv)
+{
+	int		result;
+	char	*input;
+
+	if (argc != 2)
+		return (0);
+	input = argv[1];
+	result = ft_isalpha(input);
+	if (result == 0)
+	{
+		printf("Not only alphas, result: %d", result);
+		return (0);
+	}
+	else if (result == 1)
+	{
+		printf("Only alphas, result: %d", result);
+		return (0);
+	}
+	return (0);
+}
+
+ISDIGIT
+
+int	main(int argc, char **argv)
+{
+	int		result;
+	char	*input;
+
+	if (argc != 2)
+		return (0);
+	input = argv[1];
+	result = ft_isdigit(input);
+	if (result == 0)
+	{
+		printf("Not only digits, result: %d", result);
+		return (0);
+	}
+	else if (result == 1)
+	{
+		printf("Only digits, result: %d", result);
+		return (0);
+	}
+	return (0);
+}
+
+
+ISALNUM
+
+int	main(int argc, char **argv)
+{
+	int		result;
+	char	*input;
+
+	if (argc != 2)
+		return (0);
+	input = argv[1];
+	result = ft_isalnum(input);
+	if (result == 0)
+	{
+		printf("Not only alphanum, result: %d", result);
+		return (0);
+	}
+	else if (result == 1)
+	{
+		printf("Only alphanum, result: %d", result);
+		return (0);
+	}
+	return (0);
+}
+
+isascii
+int	main(int argc, char **argv)
+{
+	int		result;
+	char	*input;
+
+	if (argc != 2)
+		return (0);
+	input = argv[1];
+	result = ft_isascii(input);
+	if (result == 0)
+	{
+		printf("Not only ascii characters, result: %d", result);
+		return (0);
+	}
+	else if (result == 1)
+	{
+		printf("Only ascii characters, result: %d", result);
+		return (0);
+	}
+	return (0);
+}
+
+is pint
+
+int	main(int argc, char **argv)
+ {
+	int		result;
+	char	*input;
+
+	if (argc != 2)
+		return (0);
+	input = argv[1];
+	result = ft_isprint(input);
+	if (result == 0)
+	{
+		printf("Not only printables, result: %d", result);
+		return (0);
+	}
+	else if (result == 1)
+	{
+		printf("Only printables, result: %d", result);
+		return (0);
+	}
+	return (0);
+}
+
+
+
+STR_LEN
+int	main(void)
+{
+	int	result;
+	char	*str;
+
+	str = "lolazo xd";
+	result = ft_strlen(str);
+	printf("Your string is %d characters long", result);
+}
+
+
+TOLOWER
+
+int	main(int argc, char **argv)
+{
+	char	*result;
+	char	*input;
+
+	if (argc != 2)
+		return (0);
+	input = argv[1];
+	result = ft_tolower(input);
+	printf("Your text: %s\n", input);
+	printf("Your text after tolower: %s", result);
+	return (0);
+}
+
+TOUPPER
+int	main(int argc, char **argv)
+{
+	char	*result;
+	char	*input;
+
+	if (argc != 2)
+		return (0);
+	input = argv[1];
+	printf("Your text: %s\n", input);
+	result = ft_toupper(input);
+	printf("Your text after toupper: %s", result);
+	return (0);
+}
+
