@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mariorte <mariorte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/13 17:50:46 by mariorte          #+#    #+#             */
-/*   Updated: 2024/12/13 18:31:11 by mariorte         ###   ########.fr       */
+/*   Created: 2024/12/13 18:53:27 by mariorte          #+#    #+#             */
+/*   Updated: 2024/12/13 18:58:57 by mariorte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *s, int c, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
 	size_t	i;
 	char	*str;
@@ -21,8 +21,7 @@ void	*ft_memset(void *s, int c, size_t n)
 	str = s;
 	while (i < n)
 	{
-		str[i] = c;
+		str[i] = 0;
 		i++;
 	}
-	return (s);
 }
