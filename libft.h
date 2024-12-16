@@ -6,7 +6,7 @@
 /*   By: mariorte <mariorte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/13 17:21:00 by mariorte          #+#    #+#             */
-/*   Updated: 2024/12/16 20:40:20 by mariorte         ###   ########.fr       */
+/*   Updated: 2024/12/16 20:41:21 by mariorte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,6 @@ int		ft_atoi(const char *str);
 void	*ft_calloc(size_t nmemb, size_t size);
 char	*ft_strdup(const char *s);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
-
+char	*ft_strjoin(char const *s1, char const *s2);
 
 #endif
