@@ -1,34 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mariorte <mariorte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/16 19:41:04 by mariorte          #+#    #+#             */
-/*   Updated: 2024/12/16 19:46:43 by mariorte         ###   ########.fr       */
+/*   Created: 2024/12/16 19:50:17 by mariorte          #+#    #+#             */
+/*   Updated: 2024/12/16 19:58:34 by mariorte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-	int	res;
-	int	sign;
+	void	*ptr;
 
-	res = 0;
-	sign = 1;
-	while (*str == 32 || (*str >= 9 && *str <= 13))
-		str++;
-	if (*str == '-')
-		sign *= -1;
-	if (*str == '-' || *str == '+')
-		str++;
-	while (ft_isdigit(*str))
-	{
-		res = res * 10 + *str - '0';
-		str++;
-	}
-	return (res * sign);
+	ptr = malloc(nmemb * size);
+	if (ptr == NULL)
+		return (NULL);
+	ft_bzero(ptr, size * nmemb);
+	return (ptr);
 }
