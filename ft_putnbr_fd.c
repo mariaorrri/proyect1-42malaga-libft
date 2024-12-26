@@ -1,37 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mariorte <mariorte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/16 20:18:12 by mariorte          #+#    #+#             */
-/*   Updated: 2024/12/26 11:12:14 by mariorte         ###   ########.fr       */
+/*   Created: 2024/12/26 10:28:08 by mariorte          #+#    #+#             */
+/*   Updated: 2024/12/26 10:48:14 by mariorte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+void	ft_putnbr_fd(int n, int fd)
 {
-	char	*str;
-	size_t	i;
-
-	if (!s)
-		return (NULL);
-	if (start > ft_strlen(s))
-		len = 0;
-	if (ft_strlen(s) < len)
-		len = ft_strlen(s);
-	str = (char *)malloc(sizeof(*s) * (len + 1));
-	if (!str)
-		return (NULL);
-	i = 0;
-	while (i < len)
+	if (n == -2147483648)
 	{
-		str[i] = s[i + start];
-		i++;
+		ft_putchar_fd('-', fd);
+		ft_putchar_fd('2', fd);
+		ft_putnbr_fd(147483648, fd);
 	}
-	str[i] = '\0';
-	return (str);
+	else if (n < 0)
+	{
+		ft_putchar_fd('-', fd);
+		ft_putnbr_fd(-n, fd);
+	}
+	else if (n > 9)
+	{
+		ft_putnbr_fd(n / 10, fd);
+		ft_putnbr_fd(n % 10, fd);
+	}
+	else
+		ft_putchar_fd(n + '0', fd);
 }
