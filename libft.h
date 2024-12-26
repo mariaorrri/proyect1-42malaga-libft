@@ -6,7 +6,7 @@
 /*   By: mariorte <mariorte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/13 17:21:00 by mariorte          #+#    #+#             */
-/*   Updated: 2024/12/16 21:06:54 by mariorte         ###   ########.fr       */
+/*   Updated: 2024/12/26 10:18:28 by mariorte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <stdlib.h>
+# include <unistd.h>
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
