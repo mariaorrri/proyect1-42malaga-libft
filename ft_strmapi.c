@@ -6,7 +6,7 @@
 /*   By: mariorte <mariorte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/16 21:07:38 by mariorte          #+#    #+#             */
-/*   Updated: 2024/12/26 09:58:24 by mariorte         ###   ########.fr       */
+/*   Updated: 2024/12/26 10:11:53 by mariorte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-    int		i;
+	int		i;
 	char	*str;
 
 	if (!s)

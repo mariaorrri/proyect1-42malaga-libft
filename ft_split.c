@@ -6,7 +6,7 @@
 /*   By: mariorte <mariorte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/16 21:06:28 by mariorte          #+#    #+#             */
-/*   Updated: 2024/12/16 21:06:45 by mariorte         ###   ########.fr       */
+/*   Updated: 2024/12/26 10:12:20 by mariorte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ static void	split_str(char **ptr, char *str, char c, int nwords)
 
 char	**ft_split(char const *s, char c)
 {
-    int		nwords;
+	int		nwords;
 	char	**ptr;
 	char	*str;
 	char	a[2];
